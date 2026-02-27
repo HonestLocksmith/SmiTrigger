@@ -1,0 +1,2 @@
+# SmiTrigger
+C++ SMI trigger
