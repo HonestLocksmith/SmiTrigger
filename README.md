@@ -1,5 +1,5 @@
 # SmiTrigger
-C++ SMI trigger
+C++ SMI trigger Linux (root)
 
 test
 
@@ -22,3 +22,12 @@ int main() {
     ioperm(0xB2, 1, 0);
     return 0;
 }
+
+
+windows user mode (python)
+
+# Using inpoutx64.dll (place in same folder or system32)
+from ctypes import windll, c_ubyte
+
+inpout = windll.LoadLibrary("inpoutx64.dll")
+inpout.Out32(0xB2, 0x00)  # Triggers SMI with code 0x00
